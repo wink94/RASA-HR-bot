@@ -6,10 +6,62 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - job_apply_fresh_non_specific
+  - hsenid_mobile_faq
+
+actions:
+  - utter_job_apply_fresh_non_specific
+  - utter_hsenid_mobile_faq
+
+
+slots:
+  name:
+    type: text
+  email:
+    type: unfeaturized
+  phone:
+    type : unfeaturized
+  applying_job_title_fresh:
+    type: unfeaturized
+  previous_job_title_fresh:
+    type: unfeaturized
+  experience:
+    type: unfeaturized
+  dob:
+    type: unfeaturized
+  age:
+    type: unfeaturized
+  degree:
+    type: unfeaturized
+  home_town:
+    type: unfeaturized
+  university:
+    type: unfeaturized
+  study_stream:
+    type: unfeaturized
+  company:
+    type: unfeaturized
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hi Welcome to Hsenid Mobile, How may i help you?"
+  - text: "Hello Welcome to Hsenid mobile bot service, How can i help You?"
+  - text: "Greetings from Hsenid Mobile, How may i helps you?"
+
+  utter_job_apply_fresh_non_specific:
+  - text: "These are our available openings, What do you prefer? \n"
+    buttons:
+      - title: "Implementation/Support"
+        payload: '/apply{"type": "impl_support"}'
+      - title: "Development"
+        payload: '/apply{"type": "development"}'
+      - title: "Project Management"
+        payload: '/apply{"type": "project_management"}'
+      - title: "Internship"
+        payload: '/apply{"type": "intern"}'
+      - title: "Not Interested"
+        payload: '/apply{"type": "intern"}'
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -18,9 +70,9 @@ responses:
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
-
+  utter_hsenid_mobile_faq:
+  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nproven expertise while still having a heart of a startup. \nWe design and build innovative cutting-edge technology platforms which enables the digital transformation of the businesses.\n"
+  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nOur solutions are used by leading Telecoms and Enterprises around the globe. \nThose revolutionary solutions bring high level of flexibility and continuous revenue growth for our customers enabling an Eco-system of creators around them."
   utter_goodbye:
   - text: "Bye"
 
