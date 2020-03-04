@@ -8,10 +8,14 @@ intents:
   - bot_challenge
   - job_apply_fresh_non_specific
   - hsenid_mobile_faq
+  - job_apply_dev
 
 actions:
   - utter_job_apply_fresh_non_specific
   - utter_hsenid_mobile_faq
+  - action_time_greeting
+  - utter_job_apply_dev
+  - utter_ASE_dev
 
 
 slots:
@@ -41,6 +45,12 @@ slots:
     type: unfeaturized
   company:
     type: unfeaturized
+  job_category:
+    type: categorical
+    values:
+      - development
+      - implementation
+      - internship
 
 
 responses:
@@ -63,6 +73,30 @@ responses:
       - title: "Not Interested"
         payload: '/apply{"type": "intern"}'
 
+  utter_job_apply_dev:
+    - text: "Welcome to Hsenid Mobile Careers!!\n\nThese are the currently available positions for Development\n Designation List \n\n"
+      buttons:
+        - title: "Associate Software Engineer"
+          payload: '/ASE_dev'
+        - title: "Software Engineer"
+          payload: '/SE_dev'
+
+  utter_ASE_dev:
+    - text: "Duties and Responsibilities: \n
+      \n Implementation and systematic verification of hardware, network, system, database and other specific environment required for installing hMS products \n
+      Implementation and systematic verification of hMS products at client environment \n \n
+      Qualification and Experience: \n
+      Degree in IT/Engineering or related field \n
+      Programming knowledge will be a plus (however, the position has No Software Development role involved)
+      \n\n Do you want to apply?"
+      buttons:
+        - title: "Yes"
+          payload: '/trigger_apply'
+        - title: "No"
+          payload: '/trigger_reject'
+        - title: "Back"
+          payload: '/trigger_back'
+
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
@@ -78,6 +112,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Hsenid."
+
+forms:
+  - user_detail_form
 
 session_config:
   session_expiration_time: 60
