@@ -64,6 +64,26 @@ can you tell me what are the available options.
 - Hi im [Nuwan](name), i'm [23](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
 can you tell me what are the available options.
 
+
+## intent: job_apply_dev
+- what are the [development](job_category) vacancies available
+- are there any [development](job_category) openings available
+- im looking for a [development](job_category) job. are there any openings available
+- im looking for a [dev](job_category:Development) job. are there any openings available
+- what are the [dev](job_category:Development) vacancies available
+- are there any [dev](job_category:Development) openings available
+- hello im [Amith](name),im looking for a [development](job_category) opening. my phone number is [0714442225](phone) 
+and my email is [amith@gmail.com](email) are there any vacancies available.
+- hello im [Amith](name),im looking for a [dev](job_category:Development) opening. my telephone number is [0774472865](phone) 
+and my email is [amith@gmail.com](email) are there any vacancies available.
+- Hi im [piumal](name), i'm [23](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
+can you tell me what are the available options. currently im looking for a [development](job_category) job. 
+- Hello im [piumal](name), i'm [23](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
+can you tell me what are the available options. currently im looking for a [dev](job_category:Development) job. 
+- im [piumal](name), im [19](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
+im looking for a [dev](job_category:Development) job. can you tell me what are the available options. 
+
+
 ## intent:goodbye
 - bye
 - goodbye
