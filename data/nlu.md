@@ -61,7 +61,7 @@
 - can you tell me about your company?
 - i want to know your company
 
-##intent: hsenid_mobile_and hsenid_biz_faq
+##intent: hsenid_mobile_and_hsenid_biz_faq
 - what is the difference between [hsenid mobile](company) and [hsenid biz](company)?
 - is [hsenid mobile](company) seperate from [hsenid biz](company)?
 
@@ -81,6 +81,7 @@ currently im looking for a Associate Engineer position.
 - can you help me to find a job. im a recently passed out graduate from [sliit](university).
 - can you help me find a job. i completed my degree recently.
 - are there any jobs available for fresh graduates.
+- hello i was a undergraduate of [universitry of colombo](university)
 
 
 ## intent: job_apply_non_specific
@@ -118,6 +119,17 @@ currently im looking for a internship.
 - can you help me find a job. i completed my degree recently.
 - are there any jobs available for fresh graduates.
 
+##intent: undergraduate
+- Are there any vacancies available for undergraduates?
+- hello i'm an undergraduate
+- im an undergraduate
+- im and undergrad
+- i am an undergrad
+- i am an undergraduate of
+
+
+
+
 
 ## intent: job_apply_dev
 - what are the [development](job_category) vacancies available
@@ -138,13 +150,6 @@ can you tell me what are the available options. currently im looking for a [dev]
 im looking for a [dev](job_category:Development) job. can you tell me what are the available options. 
 - hi i'm [saman](name).im [25](age) years old. my email is [saman@gmail.com](email). im looking for a [dev](job_category:Development) job.
 
-##intent: ASE_dev
-- ASE_dev
-- /ASE_dev
-
-##intent: trigger_apply
-- trigger_apply
-- /trigger_apply
 
 ##intent: inputs
 - [windula](name)
@@ -216,13 +221,6 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - that sounds good
 - correct
 
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
 
 ## intent:mood_great
 - perfect
@@ -583,6 +581,15 @@ how can i use you
 - am I talking to a human?
 
 
+
+##intent: ASE_dev
+- ASE_dev
+- /ASE_dev
+
+##intent: trigger_apply
+- trigger_apply
+- /trigger_apply
+
 ## regex:email
 - [^@]+@[^@]+\.[^@]+
 
@@ -596,4 +603,31 @@ how can i use you
 - hi i'm [^\\s]
 - hello i'm [^\\s]
 - hey i'm [^\\s]
+
+## synonym:Development
+- Dev
+- dev
+- Developmnt
+- developmnt
+- DEV
+- DEv
+- development
+
+## synonym:Implementation
+- implementaion
+- imple
+
+## synonym: Internship
+- intern
+- internship
+- interns
+- INTERN
+- INTERNSHIP
+
+
+## lookup: university
+data/lookups/universities.txt
+
+##lookup: study_stream
+data/lookups/study_streams.txt
 

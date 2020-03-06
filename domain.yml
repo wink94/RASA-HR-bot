@@ -11,6 +11,7 @@ intents:
   - help
   - bot_challenge
   - hsenid_mobile_faq
+  - hsenid_mobile_and_hsenid_biz_faq
   - job_apply_fresh_grad
   - job_apply_non_specific
   - job_apply_intern
@@ -40,6 +41,8 @@ actions:
   - utter_noworries
   - utter_goodbye
   - utter_goodbye_submit_CV
+  - utter_fresh_grad_job_list
+  - utter_intern_job_apply
 
 
 slots:
@@ -86,6 +89,30 @@ responses:
       - title: "Not Interested"
         payload: '/apply{"type": "intern"}'
 
+  utter_fresh_grad_job_list:
+  - text: "These are the currently available positions for fresh graduates\nAssociate System Engineer - Implementation\n
+      Associate Software Engineer (DA)\nAssociate Business Solutions Engineer\nAssociate Project Manager\nAssociate System Engineer - Implementation\n
+      \n\n Do you want to apply?"
+    buttons:
+      - title: "Yes"
+        payload: '/trigger_apply'
+      - title: "No"
+        payload: '/trigger_reject'
+      - title: "Back"
+        payload: '/trigger_back'
+
+  utter_intern_job_apply:
+  - text: "These are the currently available positions for interns\nInternship – Customer support\n
+      System Engineering Apprenticeship\nSoftware Development or Quality Assurance Apprenticeship\nInternship – Software Engineer\nInternship – Quality Assurance\n
+      \n\n Do you want to apply?"
+    buttons:
+      - title: "Yes"
+        payload: '/trigger_apply'
+      - title: "No"
+        payload: '/trigger_reject'
+      - title: "Back"
+        payload: '/trigger_back'
+
   utter_job_apply_dev:
     - text: "Welcome to Hsenid Mobile Careers!!\n\nThese are the currently available positions for Development\n Designation List \n\n"
       buttons:
@@ -121,6 +148,9 @@ responses:
   - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nproven expertise while still having a heart of a startup. \nWe design and build innovative cutting-edge technology platforms which enables the digital transformation of the businesses.\n"
   - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nOur solutions are used by leading Telecoms and Enterprises around the globe. \nThose revolutionary solutions bring high level of flexibility and continuous revenue growth for our customers enabling an Eco-system of creators around them."
 
+  utter_hsenid_mobile_biz_faq:
+  - text: "hSenid mobile solutions provide mobile based solutions while biz provide HRM solutions"
+
   utter_goodbye_submit_CV:
   - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions \nYou can submit your CV to this link: https://www.hsenidmobile.com/careers/#careers \n"
 
@@ -146,6 +176,10 @@ responses:
     - text: "What's your friends name?"
   utter_ask_FriendEmail:
     - text: "What's your friends email?"
+
+  utter_help:
+    - text: "How may i help you?"
+    - text: "Shall i help you?"
 
   utter_thank_suggestion:
     - text: Thanks for your input!

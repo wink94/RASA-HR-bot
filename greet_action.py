@@ -45,7 +45,7 @@ class ActionTimeGreet(Action):
        greet_msg=''
        if(tracker.current_slot_values()['name'] != None):
 
-           greet_msg=self.timeGreeting()+" !! "+tracker.current_slot_values()['name']+", "+self.randGreeting()+", "+help_text
+           greet_msg=self.timeGreeting()+" !! "+tracker.current_slot_values()['name']+", "+self.randGreeting()
 
        else:
            greet_msg = self.timeGreeting() +" !!," + self.randGreeting()

@@ -16,10 +16,23 @@
   - utter_noworries
   - utter_goodbye
 
+## user ask about biz and mobile
+* hsenid_mobile_and_hsenid_biz_faq
+  - action_time_greeting
+  - utter_hsenid_mobile_biz_faq
   
+##user ask help
+* help
+  - action_time_greeting
+  - utter_help
+  
+## job finding intern
+* undergrad OR 
 ## user introduction with name
 * greet
   - action_time_greeting 
+  
+  
 
 ## job search non specific with greet
 * greet
