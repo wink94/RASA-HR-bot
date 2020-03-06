@@ -19,9 +19,31 @@
 - Hola
 - hello im, [Windula Kularatne](name)
 - hi im [vinushan](name)
+- hi i'm [Simon](name)
 - hello my name is [Adam Sandler](name)
 - im [Lihini Perera](name)
 - hi im [chathura desilva](name)
+- im [windula](name)
+- im [tiran](name)
+- im [charith  wickrama](name)
+- im [pasan](name)
+- im [harsha](name)
+- im [vinushan selvaraj](name)
+- im [shamil](name)
+- im [nipuni](name)
+- im [gowrishankar](name)
+- im [harsha sanjeewa](name)
+- im [udaya](name)
+- i'm [chiranga](name)
+- i'm [siran](name)
+- i am [wasantha](name)
+- hi im [bandu samarasingha](name)
+- hi i'm [bandula perera](name)
+- hello this is [ahmed mubhash](name)
+- hey im [thilinika](name)
+- hey i'm [thilini sasala](name)
+- my name is [suban](name)
+- my name is [suhin sohan](name)
 
 ## intent: hsenid_mobile_faq
 - what is [Hsenid mobile](company)?
@@ -31,23 +53,33 @@
 - i need to know about [hsenid mobile](company)
 - i need to know about [hsenid](company)
 - tell me about [hsenid](company)
+- what is your company?
+- can you tell me about your company?
+- i want to know your company
 
 ##intent: hsenid_mobile_and hsenid_biz_faq
 - what is the difference between [hsenid mobile](company) and [hsenid biz](company)?
 - is [hsenid mobile](company) seperate from [hsenid biz](company)?
 
-## intent: job_apply_fresh_ASE
-- Hi im [windula](name). i'm looking for a ASE vacancy. what are the available positions?
-- Are there any Associate Software Engineer vacancies available
-- Hello im [Pavani Perera](name), i'm [25](age) years old. I studied at [university of moratuwa](university), [computer science](study_stream) stream.
+## intent: job_apply_fresh_grad
+- Hi im [windula](name). i'm looking for a Associate vacancy. what are the available positions?
+- Are there any vacancies available for fresh graduates?
+- Hello im [Pavani Perera](name), i'm [25](age) years old. i am a fresh graduate from [university of moratuwa](university), [computer science](study_stream) stream.
 currently im looking for a Associate Software Engineer position.
-- im [Alan Fernando](name), my age [20](age) years. my university is [IIT](university),i studied in [information technology](study_stream) stream
-currently im looking for a Associate Software Engineer position.
-- Hi what are the current available openings for ASE
-- Hi what are the current available openings for Associate Software eng
+- im [Alan Fernando](name), my age [20](age) years. im a recently passed out graduate [IIT](university),i studied in [information technology](study_stream) stream
+currently im looking for a Associate Engineer position.
+- Hi what are the current available openings for fresh graduates
+- Hi what are the current available openings for Associate eng.
+- hi im a fresh graduate. what are the jobs available for me?
+- can you suggest jobs for fresh graduates.
+- what are the jobs available for fresh graduates.
+- i recently passed out from [sliit](university). what are the job openings for me.
+- can you help me to find a job. im a recently passed out graduate from [sliit](university).
+- can you help me find a job. i completed my degree recently.
+- are there any jobs available for fresh graduates.
 
 
-## intent: job_apply_fresh_non_specific
+## intent: job_apply_non_specific
 - Hi what are the current available openings?
 - Hi im [Charith](name). what are are available openings at [hsenid mobile](company).
 - hi im a fresh graduate. can you tell me what are the openings available.
@@ -61,8 +93,26 @@ can you tell me what are the available options.
 - jobs
 - openings
 - job openings
+- what are the available jobs at hsenid.?
 - Hi im [Nuwan](name), i'm [23](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
 can you tell me what are the available options.
+
+## intent: job_apply_intern
+- Hi im [yuwan](name). i'm looking for a internship. what are the available positions?
+- Are there any internships available for undergraduates?
+- Hello im [ruwani fernando](name), i'm [25](age) years old. i am a undergraduate from [university of moratuwa](university), [computer science](study_stream) stream.
+currently im looking for an internship.
+- im [Alan turing](name), my age [20](age) years. im a undergraduate from [IIT](university),i studied in [information technology](study_stream) stream
+currently im looking for a internship.
+- Hi what are the current available openings for internships
+- Hi what are the current available openings for interns
+- hi im a undergraduate. what are the jobs available for me?
+- can you suggest jobs for undergraduates.
+- what are the jobs available for undergraduates.
+- i'm an undergraduate from [sliit](university). what are the job openings for me.
+- can you help me to find an intern. im a recently passed out graduate from [sliit](university).
+- can you help me find a job. i completed my degree recently.
+- are there any jobs available for fresh graduates.
 
 
 ## intent: job_apply_dev
@@ -82,13 +132,76 @@ can you tell me what are the available options. currently im looking for a [deve
 can you tell me what are the available options. currently im looking for a [dev](job_category:Development) job. 
 - im [piumal](name), im [19](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
 im looking for a [dev](job_category:Development) job. can you tell me what are the available options. 
+- hi i'm [saman](name).im [25](age) years old. my email is [saman@gmail.com](email). im looking for a [dev](job_category:Development) job.
 
+##intent: ASE_dev
+- ASE_dev
 
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
+##intent: trigger_apply
+- trigger_apply
+
+##intent: inputs
+- [windula](name)
+- [tiran](name)
+- [charith  wickrama](name)
+- [pasan](name)
+- [harsha](name)
+- [vinushan selvaraj](name)
+- [shamil](name)
+- [nipuni](name)
+- [gowrishankar](name)
+- [harsha sanjeewa](name)
+- [udaya](name)
+- [chiranga](name)
+- [siran](name)
+- [wasantha](name)
+- [bandu samarasingha](name)
+- [bandula perera](name)
+- [ahmed mubhash](name)
+- [thilinika](name)
+- [thilini sasala](name)
+- [suban](name)
+- [suhin sohan](name)
+- [roshini](name)
+- [akila](name)
+- [devam](name)
+- [devni](name)
+- [devin](name)
+- my email is [test@gmail.com](email)
+- my email is [sdfsd@ghon.com](email)
+- email is [test@test.com](email)
+- emails are [test@yahoo.com](email) , [sdfds@dsfsd.cdc](email)
+- [test@hotmail.com](email)
+- [test@msn.com](email)
+- [test@microsoft.com](email)
+- [test@test.lk](email)
+- my phone number is [0112458746](phone)
+- my telephone number is [0784561239](phone)
+- phone [0754561238](phone)
+- telephone [0115478963](phone)
+- [0754568523](phone) is my phone
+- [0115456789](phone)
+- [07144268469](phone)
+- [0777542679](phone)
+- [0784569214](phone)
+- [0724891275](phone)
+- [18](age)
+- im [19](age) years old
+- my age is [20](age)
+- [75](age)
+- [12/12/1994](dob)
+- [12/09/1996](dob)
+- [45/12/2001](dob)
+- [hsenid mobile](company)
+- [hsenid](company)
+- [software engineering](study_stream)
+- [information technology](study_stream)
+- [computer science](study_stream)
+- [university of moratuwa](study_stream)
+- [university of colombo](study_stream)
+- [iit](study_stream)
+- [sliit](study_stream)
+
 
 ## intent:affirm
 - yes
@@ -127,8 +240,254 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - extremely sad
 - so sad
 
+## intent:thank
+- Cool. Thanks
+- Great, thanks
+- Thank you
+- Thank you Sara
+- Thank you so much
+- Thank's!
+- Thanks
+- Thanks bot
+- Thanks for that
+- Thanks!
+- amazing, thanks
+- cheers
+- cheers bro
+- cool thank you
+- cool thanks
+- cool, thanks
+- danke
+- great thanks
+- ok thanks
+- ok thanks sara
+- ok thanks!
+- perfect thank you
+- thank u
+- thank you
+- thank you anyways
+- thanks
+- thanks a bunch for everything
+- thanks a lot
+- thanks for forum link, I'll check it out
+- thanks for the help
+- thanks this is great news
+- thanks you
+- thanks!
+- thankyou
+- thnks
+- thx
+- yes thanks
+
+## intent:react_positive
+- :)
+- :D
+- HAHA
+- I am happy
+- LOL
+- Lol
+- Lol thats funny
+- Looks nice
+- WOW
+- Wow
+- You are great
+- You're cute.
+- You're nice.
+- You're really cool
+- hAHAHA
+- ha ha
+- haha
+- hahah
+- hahaha
+- happy
+- i am feeling happy
+- i am happy
+- i am happy today
+- i am very happy with your response
+- i love you
+- it's pretty cool
+- lol
+- love you
+- okay Rasabot, you're cool
+- rasa is awesome
+- such a great demo
+- that is funny
+- that was a great interaction
+- thats funny
+- today was a nice day
+- wow
+- you are a badass bot!
+- you are awesome
+- you are cool
+- you are cool man
+- you are doin great
+- you are funny
+- you are great
+- you are my new bestfriend
+- you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
+
+## intent:bye
+- Bye
+- Bye bye
+- adios
+- adios?
+- bye
+- bye .
+- bye :P
+- bye bot
+- bye bye
+- bye bye bot
+- bye for now
+- bye udo
+- bye was nice talking to you
+- bye!
+- byee
+- catch you later
+- ciao
+- cya
+- farewell
+- good bye
+- good bye rasa bot!
+- good night
+- goodbye
+- goodbye.
+- goodnight
+- gotta go
+- k byyye #slay
+- ok Bye
+- ok bye
+- ok, bye
+- ok.bye
+- see u later
+- see ya
+- see you
+- see you . bye
+- take care
+- then bye
+- tlak to you later
+- toodle-oo
+
+## intent:deny
+- I don't want to
+- I don't want to give it to you
+- I don't want to say
+- I dont want to tell
+- I'm not giving you my email address
+- I'm not going to give it to you
+- NEIN
+- NO
+- NO DON"T WANT THIS!
+- Nah
+- Neither
+- Never
+- Nevermind
+- No
+- No thank you
+- No, not really.
+- No, thank you
+- No.
+- Nopes
+- Not really
+- absolutely not
+- decline
+- definitely not
+- deny
+- i decline
+- i don not like this
+- i don't think so
+- i don't want either of those
+- i don't want to
+- i don't want to give you my email
+- i dont want to
+- i dont want to accept :P lol
+- i guess it means - no
+- i'm afraid not
+- i'm not sure
+- it is going pretty badly
+- it sucks
+- it sux
+- n
+- na
+- nah
+- nah I'm good
+- nah not for me
+- nah, first time
+- nah, i'm good
+- nehi
+- nein
+- neither
+- never
+- never mind
+- no
+- no :(
+- no I dont want
+- no I haven't decided yet if I want to sign up
+- no and no again
+- no bots at all
+- no go
+- no i can't
+- no i don't accept
+- no i dont want to
+- no i dont want to accept :P lol
+- no i won't
+- no ma'am
+- no sir
+- no sorry
+- no thank s
+- no thank you
+- no thanks
+- no way
+- no you did it wrong
+- no!!!!
+- no, i hate it
+- no, my frst time
+- no, thank you
+- no, thanks
+- no, thankyou
+- no. u r idiot
+- non
+- noooooooooo
+- noooooooooooooooooooooooooooooooooooooooo
+- nop
+- nope
+- nope!
+- nope. i am good
+- not going well at all
+- not really
+- not right now
+- not yet
+- nö
+- sorry not right now
+- still dont want to tell
+- thanks but no thanks
+- this sucks
+- very bad
+- I do not need help installing
+- I don't wanna tell the name of my company
+- no stop
+- stop it, i do not care!!!
+
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+
+## regex:email
+- [^@]+@[^@]+\.[^@]+
+
+## regex:phone
+- ^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$
+
+## regex:age
+- ^([1-9]\d?)?$
+
+## regex:name
+- hi i'm [^\\s]
+- hello i'm [^\\s]
+- hey i'm [^\\s]
+

@@ -3,7 +3,8 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
-#import greet_action
+import greet_action
+import form_user_details
 
 # This is a simple example for a custom action which utters "Hello World!"
 

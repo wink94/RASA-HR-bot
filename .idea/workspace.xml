@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6d6cba-992d-4a2c-b4e5-56410f21d3b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/custom_regex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/form_user_details.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/nlu.md" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/stories.md" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints.yml" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/greet_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/greet_action.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,21 +67,56 @@
       <option name="project" value="LOCAL" />
       <updated>1583146889494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit issue fix">
+      <created>1583385318498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583385318498</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="initial commit issue fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit issue fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2" timestamp="1583146889441">
+    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2" timestamp="1583385318405">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2/65.24.1301.744@65.24.1301.744" timestamp="1583146889441" />
+    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2/65.24.1301.744@65.24.1301.744" timestamp="1583385318405" />
     <state x="503" y="127" key="FileChooserDialogImpl" timestamp="1583225070826">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
     <state x="503" y="127" key="FileChooserDialogImpl/65.24.1301.744@65.24.1301.744" timestamp="1583225070826" />
+    <state x="209" y="24" key="SettingsEditor" timestamp="1583388497341">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="209" y="24" key="SettingsEditor/65.24.1301.744@65.24.1301.744" timestamp="1583388497341" />
+    <state x="315" y="119" key="Vcs.Push.Dialog.v2" timestamp="1583387241365">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="315" y="119" key="Vcs.Push.Dialog.v2/65.24.1301.744@65.24.1301.744" timestamp="1583387241365" />
+    <state x="122" y="103" width="1101" height="572" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583463857181">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="122" y="103" width="1101" height="572" key="com.intellij.history.integration.ui.views.FileHistoryDialog/65.24.1301.744@65.24.1301.744" timestamp="1583463857181" />
+    <state x="165" y="96" width="1101" height="572" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1583463857181">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="165" y="96" width="1101" height="572" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/65.24.1301.744@65.24.1301.744" timestamp="1583463857181" />
   </component>
 </project>

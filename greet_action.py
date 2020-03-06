@@ -16,10 +16,8 @@ class ActionTimeGreet(Action):
    def timeGreeting(self):
 
        hour = datetime.datetime.now().hour
-       minute = datetime.datetime.now().minute
 
        if hour < 12:
-           print("good morning")
            return "Good Morning"
        elif hour >= 12 and hour < 18:
            return "Good Afternoon"
@@ -32,10 +30,10 @@ class ActionTimeGreet(Action):
 
    def randGreeting(self):
 
-       greetings=["Hi Welcome to Hsenid Mobile, How may i help you?","Hello Welcome to Hsenid mobile bot service, How can i help You?"
-        ,"Greetings from Hsenid Mobile, How may i helps you?"]
+       greetings=["Welcome to Hsenid Mobile","Welcome to Hsenid mobile bot service"
+        ,"Greetings from Hsenid Mobile"]
 
-       return "".join([self.timeGreeting()," ,",greetings[randint(0,2)]])
+       return greetings[randint(0,2)]
 
 
    def run(self,
@@ -43,8 +41,16 @@ class ActionTimeGreet(Action):
            tracker: Tracker,
            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-       print(tracker)
-       return [BotUttered(text=self.randGreeting())]
+       help_text="How may i help you?"
+       greet_msg=''
+       if(tracker.current_slot_values()['name'] != None):
+
+           greet_msg=self.timeGreeting()+" !! "+tracker.current_slot_values()['name']+", "+self.randGreeting()+", "+help_text
+
+       else:
+           greet_msg = self.timeGreeting() +" !!," + self.randGreeting()
+
+       return [BotUttered(text=greet_msg)]
 
 
 

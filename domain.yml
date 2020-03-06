@@ -2,21 +2,42 @@ intents:
   - greet
   - goodbye
   - affirm
-  - deny
   - mood_great
   - mood_unhappy
+  - thank
+  - bye
+  - deny
   - bot_challenge
-  - job_apply_fresh_non_specific
   - hsenid_mobile_faq
-  - job_apply_fresh_ASE
+  - job_apply_fresh_grad
+  - job_apply_non_specific
+  - job_apply_intern
   - job_apply_dev
+  - inputs
+  - ASE_dev
+  - trigger_apply
+
+entities:
+  - name
+  - email
+  - phone
+  - dob
+  - age
+  - university
+  - study_stream
+  - company
+  - job_category
 
 actions:
-  - utter_job_apply_fresh_non_specific
+  - utter_job_apply_non_specific
   - utter_hsenid_mobile_faq
   - action_time_greeting
   - utter_job_apply_dev
   - utter_ASE_dev
+  - utter_thank_suggestion
+  - utter_noworries
+  - utter_goodbye
+  - utter_goodbye_submit_CV
 
 
 slots:
@@ -28,17 +49,9 @@ slots:
     type : unfeaturized
   applying_job_title_fresh:
     type: unfeaturized
-  previous_job_title_fresh:
-    type: unfeaturized
-  experience:
-    type: unfeaturized
   dob:
     type: unfeaturized
   age:
-    type: unfeaturized
-  degree:
-    type: unfeaturized
-  home_town:
     type: unfeaturized
   university:
     type: unfeaturized
@@ -57,8 +70,7 @@ slots:
 
 responses:
 
-
-  utter_job_apply_fresh_non_specific:
+  utter_job_apply_non_specific:
   - text: "These are our available openings, What do you prefer? \n"
     buttons:
       - title: "Implementation/Support"
@@ -106,11 +118,44 @@ responses:
   utter_hsenid_mobile_faq:
   - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nproven expertise while still having a heart of a startup. \nWe design and build innovative cutting-edge technology platforms which enables the digital transformation of the businesses.\n"
   - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nOur solutions are used by leading Telecoms and Enterprises around the globe. \nThose revolutionary solutions bring high level of flexibility and continuous revenue growth for our customers enabling an Eco-system of creators around them."
+
+  utter_goodbye_submit_CV:
+  - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions \nYou can submit your CV to this link: https://www.hsenidmobile.com/careers/#careers \n"
+
+  utter_services:
+  - text: " I can help you with\nFindning a job at Hsenid Mobile\nTell you about the company\nTell jokes"
+
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions"
 
   utter_iamabot:
   - text: "I am a bot, powered by Hsenid."
+
+  utter_ask_name:
+    - text: "What's your first name?"
+  utter_ask_dob:
+    - text: "What's your birthday (dd/mm/yyyy)?"
+  utter_ask_phone:
+    - text: "What's your phone number?"
+  utter_ask_email:
+    - text: "What's your email?"
+
+  utter_ask_FriendName:
+    - text: "What's your friends name?"
+  utter_ask_FriendEmail:
+    - text: "What's your friends email?"
+
+  utter_thank_suggestion:
+    - text: Thanks for your input!
+  utter_noworries:
+    - text: No worries!
+    - text: You're welcome!
+    - text: I'm happy to help.
+
+forms:
+  - user_detail_form
+
+
 
 session_config:
   session_expiration_time: 60
