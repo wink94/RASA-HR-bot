@@ -1,5 +1,5 @@
-from rasa_sdk.events import AllSlotsReset
-from typing import Dict, List, Text, Any, Union
+from rasa_sdk.events import AllSlotsReset, EventType
+from typing import Dict, List, Text, Any, Union, Optional
 import re
 
 from rasa_sdk import Action, Tracker
@@ -10,6 +10,8 @@ from rasa_sdk.forms import FormAction
 
 class UserDetailForm(FormAction):
     """Collects  information from user"""
+
+    deactivate_forms=["deactivate","stop form","deactivate form","please stop form","delete form"]
 
     def name(self):
         return "user_detail_form"
@@ -22,6 +24,7 @@ class UserDetailForm(FormAction):
             "dob",
             "phone",
             "email",
+            "job_preference"
         ]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict[Text, Any]]]]:
@@ -30,8 +33,23 @@ class UserDetailForm(FormAction):
             "name": [self.from_text()],
             "dob": [self.from_text()],
             "phone": [self.from_text()],
-            "email": [self.from_text()]
+            "email": [self.from_text()],
+            "job_preference": [self.from_text()]
         }
+
+    def request_next_slot(
+        self,
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: Dict[Text, Any],
+    ) -> Optional[List[EventType]]:
+
+        intent = tracker.latest_message.get("intent", {}).get("name")
+        print(intent)
+        if intent.lower() in self.deactivate_forms:
+
+            return self.deactivate()
+
 
     # first name alphabetical text only validation
     def validate_name(
@@ -42,8 +60,10 @@ class UserDetailForm(FormAction):
             domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
 
+
         if value.strip().isalpha():
             return {"name": value}
+
         else:
             dispatcher.utter_message(text="utter_wrong_input")
             return {"name": None}
@@ -60,6 +80,7 @@ class UserDetailForm(FormAction):
 
         reg_string = "^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$"
 
+
         if re.search(reg_string, value):
             return {"dob": value}
         else:
@@ -75,6 +96,8 @@ class UserDetailForm(FormAction):
             domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
         reg_phone="^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|5|6|7|8)\d)\d{6}$"
+
+
         if re.search(reg_phone, value):
             return {"phone": value}
         else:

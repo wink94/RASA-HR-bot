@@ -5,6 +5,7 @@
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 import greet_action
 import form_user_details
+import form_deactivate_action
 
 # This is a simple example for a custom action which utters "Hello World!"
 

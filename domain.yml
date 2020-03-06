@@ -15,10 +15,15 @@ intents:
   - job_apply_fresh_grad
   - job_apply_non_specific
   - job_apply_intern
+  - undergraduate
   - job_apply_dev
   - inputs
   - ASE_dev
   - trigger_apply
+  - trigger_reject
+  - trigger_back
+  - deactivate
+  - telljoke
 
 entities:
   - name
@@ -43,6 +48,11 @@ actions:
   - utter_goodbye_submit_CV
   - utter_fresh_grad_job_list
   - utter_intern_job_apply
+  - utter_services
+  - utter_fresh_grad_job_select_list
+  - utter_ask_form_continue
+  - action_form_deactivate
+  - utter_joke
 
 
 slots:
@@ -71,6 +81,19 @@ slots:
       - implementation
       - internship
 
+  job_preference:
+    type: categorical
+    values:
+      - ASE_impl
+      - ASE_DA
+      - APM
+      - ABSE
+      - Internship_Customer_support
+      - Sys_eng_apprentice
+      - soft_dev_apprentice
+      - QA_apprentice
+      - SE_intern
+      - QA_intern
 
 
 responses:
@@ -91,7 +114,7 @@ responses:
 
   utter_fresh_grad_job_list:
   - text: "These are the currently available positions for fresh graduates\nAssociate System Engineer - Implementation\n
-      Associate Software Engineer (DA)\nAssociate Business Solutions Engineer\nAssociate Project Manager\nAssociate System Engineer - Implementation\n
+      Associate Software Engineer (DA)\nAssociate Business Solutions Engineer\nAssociate Project Manager\n\n
       \n\n Do you want to apply?"
     buttons:
       - title: "Yes"
@@ -101,17 +124,50 @@ responses:
       - title: "Back"
         payload: '/trigger_back'
 
+  utter_fresh_grad_job_select_list:
+    - text: "Please select your preferred opening\n Designation List \n\n"
+      buttons:
+        - title: "Associate System Engineer - Implementation"
+          payload: '/ASE_impl'
+        - title: "Associate Software Engineer (DA)"
+          payload: '/ASE_DA'
+        - title: "Associate Business Solutions Engineer"
+          payload: '/ABSE'
+        - title: "Associate Project Manager"
+          payload: '/APM'
+        - title: "Exit"
+          payload: "bye"
+
   utter_intern_job_apply:
   - text: "These are the currently available positions for interns\nInternship – Customer support\n
-      System Engineering Apprenticeship\nSoftware Development or Quality Assurance Apprenticeship\nInternship – Software Engineer\nInternship – Quality Assurance\n
+      System Engineering Apprenticeship\nSoftware Development Apprenticeship\nQuality Assurance Apprenticeship\nInternship – Software Engineer\nInternship – Quality Assurance\n
       \n\n Do you want to apply?"
     buttons:
       - title: "Yes"
         payload: '/trigger_apply'
       - title: "No"
         payload: '/trigger_reject'
-      - title: "Back"
-        payload: '/trigger_back'
+      - title: "Exit"
+        payload: "bye"
+
+  utter_intern_job_select_list:
+    - text: "Please select your preferred opening\n Designation List \n\n"
+      buttons:
+        - title: "Internship – Customer support"
+          payload: '/Internship_Customer_support'
+        - title: "System Engineering Apprenticeship"
+          payload: '/Sys_eng_apprentice'
+        - title: "Software Development Apprenticeship"
+          payload: '/soft_dev_apprentice'
+        - title: "Quality Assurance Apprenticeship"
+          payload: '/QA_apprentice'
+        - title: "Internship – Software Engineer"
+          payload: "/SE_intern"
+        - title: "Internship – Quality Assurance"
+          payload: "/QA_intern"
+        - title: "Back"
+          payload: '/trigger_back'
+
 
   utter_job_apply_dev:
     - text: "Welcome to Hsenid Mobile Careers!!\n\nThese are the currently available positions for Development\n Designation List \n\n"
@@ -155,13 +211,26 @@ responses:
   - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions \nYou can submit your CV to this link: https://www.hsenidmobile.com/careers/#careers \n"
 
   utter_services:
-  - text: " I can help you with\nFindning a job at Hsenid Mobile\nTell you about the company\nTell jokes"
+  - text: " I can help you with\nStart your career at Hsenid Mobile\nTell you about the company\nTell jokes"
 
+  utter_joke:
+  - text: "🐨 Why did the chatbot cross the road?\n
+             Because it was programmed to be a chicken!"
+  - text: "🐨 You know, I was chatting to a lumberjack the other day.\n
+           He seemed like a decent feller."
+  - text: "👤: Are you hungry?\n
+           🐨: No thanks, I just had a byte to eat."
+  - text: "My old aunts would come and tease me at weddings, “Well Sarah? Do you think you’ll be next?\n”
+           We’ve settled this quickly once I’ve started doing the same to them at funerals."
+
+  utter_ask_form_continue:
+    - text: "Do you want to continue?"
   utter_goodbye:
   - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions"
 
   utter_iamabot:
   - text: "I am a bot, powered by Hsenid."
+
 
   utter_ask_name:
     - text: "What's your first name?"
@@ -171,6 +240,8 @@ responses:
     - text: "What's your phone number?"
   utter_ask_email:
     - text: "What's your email?"
+  utter_ask_job_preference:
+    - text: "What is your preferred job position"
 
   utter_ask_FriendName:
     - text: "What's your friends name?"

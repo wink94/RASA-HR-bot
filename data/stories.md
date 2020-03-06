@@ -10,7 +10,6 @@
   
 ## user asking about company without greeting
 * hsenid_mobile_faq
-  - action_time_greeting
   - utter_hsenid_mobile_faq
 * thank
   - utter_noworries
@@ -24,59 +23,64 @@
 ##user ask help
 * help
   - action_time_greeting
-  - utter_help
+  - utter_services
   
-## job finding intern
-* undergrad OR 
 ## user introduction with name
 * greet
   - action_time_greeting 
+  - utter_services
   
-  
-
-## job search non specific with greet
-* greet
+## job finding intern with help
+* help
   - action_time_greeting
-* job_apply_fresh_grad
+  - utter_services
+* undergraduate OR job_apply_intern
+  - utter_intern_job_apply
+  - utter_intern_job_select_list
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
 
-  
-## job search non specific without greet
-* job_apply_fresh_grad
-
-
-## job search dev with greet
-* greet
+## job finding intern with greet + help
+*greet
   - action_time_greeting
-* job_apply_dev
-  - utter_job_apply_dev
+* help
+  - utter_services
+* undergraduate OR job_apply_intern
+  - utter_intern_job_apply
+  - utter_intern_job_select_list
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
   
-## job search dev without greet
-* job_apply_dev
+## job finding intern with greet 
+*greet
   - action_time_greeting
-  - utter_job_apply_dev
-  
-## job search dev apply ASE with greet
-* greet
-  - action_time_greeting
-* job_apply_dev
-   - utter_job_apply_dev
-* ASE_dev
-   - utter_ASE_dev
+* undergraduate OR job_apply_intern
+  - utter_intern_job_apply
 * trigger_apply
-   - user_detail_form
-   - form{"name":"user_detail_form"}
-   - form{"name": null}
-   - slot{"name": "saman"}
-   - slot{"name": "akmal perera"}
-   - slot{"dob": "12/12/1995"}
-   - slot{"phone": "0714562589"}
-   - slot{"email": "test@test.com"}
+  - utter_intern_job_select_list
 
-   
-## job search dev apply ASE without greet
-* job_apply_dev
-   - action_time_greeting
-   - utter_job_apply_dev
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  
+  
+## job finding fresh grad with help
+* help
+  - action_time_greeting
+  - utter_services
+* job_apply_fresh_grad
+  - utter_fresh_grad_job_list
+  - utter_fresh_grad_job_select_list
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  
+##direct job ask intern from bot
+* undergraduate OR job_apply_intern
+  - utter_intern_job_apply
+  
   
 ## happy hsenid faq path
 * greet
@@ -84,15 +88,21 @@
 * hsenid_mobile_faq
   - utter_hsenid_mobile_faq
 
-## user detail form
-* trigger_apply
-  - user_detail_form
-  - form{"name":"user_detail_form"}
-  - form{"name": null}
   
 ## getting company details
 
+##user detail form deactivate
+* deactivate
+  - utter_ask_form_continue
+* deny
+  - action_deactivate_form
 
+## user ask a joke
+* telljoke
+ - utter_joke
+* thank OR affirm OR mood_great
+ - utter_services
+   
 ## sad path 2
 * greet
   - action_time_greeting

@@ -101,6 +101,9 @@ can you tell me what are the available options.
 - what are the available jobs at hsenid.?
 - Hi im [Nuwan](name), i'm [23](age) years old. I studied at [university of colombo](university), [software engineering](study_stream) stream.
 can you tell me what are the available options.
+- im looking for a job
+- what are the job openings you have
+- what are job openings at [hsenid](company)
 
 ## intent: job_apply_intern
 - Hi im [yuwan](name). i'm looking for a internship. what are the available positions?
@@ -126,9 +129,6 @@ currently im looking for a internship.
 - im and undergrad
 - i am an undergrad
 - i am an undergraduate of
-
-
-
 
 
 ## intent: job_apply_dev
@@ -507,7 +507,7 @@ Can you help me?
 - help pls
 - help?
 - hep me
-how can i use you
+- how can i use you
 - how can you help me
 - how can you help me?
 - how can you help?
@@ -573,6 +573,52 @@ how can i use you
 - what you do
 - what you doing?
 - what you talk about?
+- hi im [kumara](name). can u help me
+- hello i'm [nihara](name). can you help me.
+- hey im [wizma](name). i want help
+
+
+##intent:telljoke
+- Can you tell a joke?
+- Can you tell me a joke.
+- Come up with a joke you think I'll find funny.
+- Could you please share a joke with me.
+- Could you tell me a joke.
+- Do you have any jokes?
+- Do you know any jokes?
+- Entertain me with a joke.
+- Give me a funny joke.
+- Give me a joke.
+- Give me some comic relief.
+- I need a good joke.
+- I want to hear something funny.
+- Know any jokes?
+- Let's hear a joke from you.
+- Make me laugh.
+- Please tell me a joke.
+- Say something funny.
+- Share a joke with me!
+- Tell joke.
+- Tell me something funny.
+- Tell me something humorous!
+- Tell me something that you think will make me laugh.
+- Tell me the best joke you know.
+- What's a good joke?
+- Will you tell me a joke.
+- Would you share a joke with me.
+- Would you tell me a joke
+- give me a good joke
+- make me laugh with a bad joke
+- make me laugh with a joke
+- say a funny joke
+- say a joke
+- say a joke that's funny
+- say a joke that's so bad it's funny
+- tell me a joke
+- tell me a short joke
+- tell me a story joke
+- tell me something funny, like a joke
+- you can say a jok
 
 ## intent:bot_challenge
 - are you a bot?
@@ -580,6 +626,14 @@ how can i use you
 - am I talking to a bot?
 - am I talking to a human?
 
+##intent: deactivate
+- deactivate
+- stop form
+- deactivate form
+- please stop form
+- delete form
+- exit form
+- exit
 
 
 ##intent: ASE_dev
@@ -589,6 +643,16 @@ how can i use you
 ##intent: trigger_apply
 - trigger_apply
 - /trigger_apply
+
+## intent: trigger_reject
+- trigger_reject
+- /trigger_reject
+
+##intent: trigger_back
+- trigger_back
+- /trigger_back
+
+##intent: 
 
 ## regex:email
 - [^@]+@[^@]+\.[^@]+
@@ -603,6 +667,8 @@ how can i use you
 - hi i'm [^\\s]
 - hello i'm [^\\s]
 - hey i'm [^\\s]
+- hi im [^\\s]
+- hey im [^\\s]
 
 ## synonym:Development
 - Dev
@@ -623,6 +689,11 @@ how can i use you
 - interns
 - INTERN
 - INTERNSHIP
+
+## synonym: hSenid
+- hsenid
+- HSENID
+- hSENID
 
 
 ## lookup: university
