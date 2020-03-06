@@ -1,11 +1,10 @@
-from rasa_sdk.events import AllSlotsReset, EventType
+from rasa_sdk.events import AllSlotsReset, EventType, SlotSet, BotUttered
 from typing import Dict, List, Text, Any, Union, Optional
 import re
 
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, logger
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
-
+from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 
 
 class UserDetailForm(FormAction):
@@ -18,7 +17,8 @@ class UserDetailForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        print(tracker.current_slot_values())
+        logger.debug(tracker.current_slot_values())
+
         return [
             "name",
             "dob",
@@ -45,11 +45,22 @@ class UserDetailForm(FormAction):
     ) -> Optional[List[EventType]]:
 
         intent = tracker.latest_message.get("intent", {}).get("name")
-        print(intent)
+
         if intent.lower() in self.deactivate_forms:
 
-            return self.deactivate()
 
+            # return self.deactivate()
+            return [BotUttered("Do you really want to exit?",tracker),AllSlotsReset()]
+
+        else:
+            for slot in self.required_slots(tracker):
+                if self._should_request_slot(tracker, slot):
+                    logger.debug("Request next slot '{}'".format(slot))
+                    dispatcher.utter_template("utter_ask_{}".format(slot),
+                                              tracker,
+                                              silent_fail=False,
+                                              **tracker.slots)
+                    return [SlotSet(REQUESTED_SLOT, slot)]
 
     # first name alphabetical text only validation
     def validate_name(
@@ -59,6 +70,7 @@ class UserDetailForm(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
+
 
 
         if value.strip().isalpha():
@@ -127,6 +139,7 @@ class UserDetailForm(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any],
     ) -> List[Dict]:
-
+        print("hello")
         dispatcher.utter_message("Thanks for getting in touch with Hsenid Mobile \nYou can submit your CV to this link: https://www.hsenidmobile.com/careers/#careers ")
         return [AllSlotsReset()]
+

@@ -36,10 +36,16 @@
   - utter_services
 * undergraduate OR job_apply_intern
   - utter_intern_job_apply
-  - utter_intern_job_select_list
+* trigger_apply
   - user_detail_form
   - form{"name":"user_detail_form"}
   - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
 
 ## job finding intern with greet + help
 *greet
@@ -48,10 +54,16 @@
   - utter_services
 * undergraduate OR job_apply_intern
   - utter_intern_job_apply
-  - utter_intern_job_select_list
+* trigger_apply
   - user_detail_form
   - form{"name":"user_detail_form"}
   - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
   
 ## job finding intern with greet 
 *greet
@@ -59,11 +71,15 @@
 * undergraduate OR job_apply_intern
   - utter_intern_job_apply
 * trigger_apply
-  - utter_intern_job_select_list
-
   - user_detail_form
   - form{"name":"user_detail_form"}
   - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
   
   
 ## job finding fresh grad with help
@@ -72,15 +88,81 @@
   - utter_services
 * job_apply_fresh_grad
   - utter_fresh_grad_job_list
-  - utter_fresh_grad_job_select_list
+* trigger_apply
   - user_detail_form
   - form{"name":"user_detail_form"}
   - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
   
 ##direct job ask intern from bot
 * undergraduate OR job_apply_intern
   - utter_intern_job_apply
+* trigger_apply
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
   
+##direct job ask fresh grad from bot
+* job_apply_fresh_grad
+  - utter_fresh_grad_job_list
+* trigger_apply
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"}
+ 
+## job finding non specific with help
+* help
+  - action_time_greeting
+  - utter_services
+* job_apply_non_specific
+  - utter_job_apply_non_specific
+* apply_impl_support OR apply_development OR apply_project_management OR apply_intern
+  - utter_thank_for_job_apply_non_specific
+* affirm OR help
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"} 
+  
+##direct job ask fresh grad from bot
+* job_apply_non_specific
+  - utter_job_apply_non_specific
+* apply_impl_support OR apply_development OR apply_project_management OR apply_intern
+  - utter_thank_for_job_apply_non_specific
+* affirm OR help
+  -utter_ask_details
+* affirm OR help
+  - user_detail_form
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
+  - slot{"name": "saman"}
+  - slot{"name": "akmal perera"}
+  - slot{"dob": "12/12/1995"}
+  - slot{"phone": "0714562589"}
+  - slot{"email": "test@test.com"}
+  - slot{"job_preference":"intern software engineer"} 
   
 ## happy hsenid faq path
 * greet

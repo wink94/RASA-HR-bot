@@ -24,12 +24,17 @@ intents:
   - trigger_back
   - deactivate
   - telljoke
+  - apply_impl_support
+  - apply_development
+  - apply_project_management
+  - apply_intern
 
 entities:
   - name
   - email
   - phone
   - dob
+  - job_preference
   - age
   - university
   - study_stream
@@ -41,7 +46,6 @@ actions:
   - utter_hsenid_mobile_faq
   - action_time_greeting
   - utter_job_apply_dev
-  - utter_ASE_dev
   - utter_thank_suggestion
   - utter_noworries
   - utter_goodbye
@@ -53,6 +57,8 @@ actions:
   - utter_ask_form_continue
   - action_form_deactivate
   - utter_joke
+  - utter_thank_for_job_apply_non_specific
+  - utter_ask_details
 
 
 slots:
@@ -110,7 +116,24 @@ responses:
       - title: "Internship"
         payload: '/apply{"type": "intern"}'
       - title: "Not Interested"
-        payload: '/apply{"type": "intern"}'
+        payload: '/trigger_back'
+
+
+  utter_thank_for_job_apply_non_specific:
+    - text: "Thank you for your interest, Would you like to know our openings?"
+  utter_ask_details:
+    - text: "I need some details about you. I hope you are okay with it"
+    - text: "Thank you for your interest, Would you like to know our openings?"
+  utter_thank_for_job_apply_non_specific_Implementation_Support:
+  - text: "Thank you for your interest, Would you like to know our openings on Implementation/Support?"
+  utter_thank_for_job_apply_non_specific_Development:
+    - text: "Thank you for your interest, Would you like to know our openings on Development?"
+  utter_thank_for_job_apply_non_specific_project_management:
+    - text: "Thank you for your interest, Would you like to know our openings on Project Management?"
+  utter_thank_for_job_apply_non_specific_internships:
+    - text: "Thank you for your interest, Would you like to know our openings on Internships?"
+
+
 
   utter_fresh_grad_job_list:
   - text: "These are the currently available positions for fresh graduates\nAssociate System Engineer - Implementation\n
@@ -170,21 +193,8 @@ responses:
 
 
   utter_job_apply_dev:
-    - text: "Welcome to Hsenid Mobile Careers!!\n\nThese are the currently available positions for Development\n Designation List \n\n"
-      buttons:
-        - title: "Associate Software Engineer"
-          payload: '/ASE_dev'
-        - title: "Software Engineer"
-          payload: '/SE_dev'
-
-  utter_ASE_dev:
-    - text: "Duties and Responsibilities: \n
-      \n Implementation and systematic verification of hardware, network, system, database and other specific environment required for installing hMS products \n
-      Implementation and systematic verification of hMS products at client environment \n \n
-      Qualification and Experience: \n
-      Degree in IT/Engineering or related field \n
-      Programming knowledge will be a plus (however, the position has No Software Development role involved)
-      \n\n Do you want to apply?"
+    - text: "These are the currently available positions for Development\n Designation List \n\nAssociate Software Engineer\nSoftware Engineer\n
+      \n\n Do you want to apply?\n"
       buttons:
         - title: "Yes"
           payload: '/trigger_apply'

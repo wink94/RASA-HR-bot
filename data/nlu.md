@@ -82,6 +82,8 @@ currently im looking for a Associate Engineer position.
 - can you help me find a job. i completed my degree recently.
 - are there any jobs available for fresh graduates.
 - hello i was a undergraduate of [universitry of colombo](university)
+- can you list job openings for freshers?
+- what are the openings for freshers.
 
 
 ## intent: job_apply_non_specific
@@ -220,6 +222,59 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - of course
 - that sounds good
 - correct
+- Accept
+- Awesome!
+- Cool
+- Good
+- Great
+- I accept
+- I accept.
+- I agree
+- Nice
+- OK
+- Ofcourse
+- Oh yes
+- Oh, ok
+- Ok
+- Ok let's start
+- Ok.
+- Okay
+- Okay!
+- PLEASE
+- SURE
+- Sure
+- Sweet
+- That would be great
+- YES
+- YUP
+- Yea
+- Yeah
+- Yeah sure
+- Yep
+- Yep that's fine
+- Yep!
+- Yepp
+- Yes
+- Yes I do
+- Yes please
+- Yes please!
+- Yes, I accept
+- Yes.
+- Yup
+- a little
+- absolutely
+- accept
+- accepted
+- agreed
+- ah ok
+- alright
+- alright, cool
+- amayzing
+- amazing!
+- awesome
+- awesome!
+- confirm
+- cool
 
 
 ## intent:mood_great
@@ -652,7 +707,22 @@ Can you help me?
 - trigger_back
 - /trigger_back
 
-##intent: 
+##intent: apply_impl_support
+- apply{"type": "impl_support"}
+- /apply{"type": "impl_support"}
+
+##intent: apply_development
+- apply{"type": "development"}
+- /apply{"type": "development"}
+
+##intent: apply_project_management
+- apply{"type": "project_management"}
+- /apply{"type": "development"}
+
+##intent: apply_intern
+- apply{"type": "intern"}
+- /apply{"type": "intern"}
+
 
 ## regex:email
 - [^@]+@[^@]+\.[^@]+

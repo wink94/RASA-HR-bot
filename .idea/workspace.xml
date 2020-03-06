@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6d6cba-992d-4a2c-b4e5-56410f21d3b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/lookups/study_streams.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/lookups/universities.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/nlu.md" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/stories.md" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/greet_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/greet_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/form_user_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/form_user_details.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583465711956</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="warnings removed ( intents names should be listed correctly in stories and domain.yml)">
+      <created>1583469615716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583469615716</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added more training data">
+      <created>1583483474256</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583483474256</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,15 +115,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
     <MESSAGE value="initial commit issue fix" />
-    <MESSAGE value="added more training data" />
     <MESSAGE value="warnings removed ( intents names should be listed correctly in stories and domain.yml)" />
-    <option name="LAST_COMMIT_MESSAGE" value="warnings removed ( intents names should be listed correctly in stories and domain.yml)" />
+    <MESSAGE value="added more training data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more training data" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2" timestamp="1583465711808">
+    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2" timestamp="1583483474127">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2/65.24.1301.744@65.24.1301.744" timestamp="1583465711808" />
+    <state x="326" y="59" width="782" height="630" key="CommitChangelistDialog2/65.24.1301.744@65.24.1301.744" timestamp="1583483474127" />
     <state x="503" y="127" key="FileChooserDialogImpl" timestamp="1583225070826">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
@@ -120,10 +132,10 @@
       <screen x="65" y="24" width="1301" height="744" />
     </state>
     <state x="209" y="24" key="SettingsEditor/65.24.1301.744@65.24.1301.744" timestamp="1583388497341" />
-    <state x="315" y="119" key="Vcs.Push.Dialog.v2" timestamp="1583465725325">
+    <state x="315" y="119" key="Vcs.Push.Dialog.v2" timestamp="1583483561850">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state x="315" y="119" key="Vcs.Push.Dialog.v2/65.24.1301.744@65.24.1301.744" timestamp="1583465725325" />
+    <state x="315" y="119" key="Vcs.Push.Dialog.v2/65.24.1301.744@65.24.1301.744" timestamp="1583483561850" />
     <state x="122" y="103" width="1101" height="572" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583463857181">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
