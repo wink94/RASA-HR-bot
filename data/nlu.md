@@ -37,13 +37,17 @@
 - i'm [chiranga](name)
 - i'm [siran](name)
 - i am [wasantha](name)
+- hi i am [wasantha](name)
+- hello i'm [kumara](name)
 - hi im [bandu samarasingha](name)
 - hi i'm [bandula perera](name)
+- Hi I'm [Adam LAmbert](name)
 - hello this is [ahmed mubhash](name)
 - hey im [thilinika](name)
 - hey i'm [thilini sasala](name)
 - my name is [suban](name)
 - my name is [suhin sohan](name)
+- my name [saman kumara](name)
 
 ## intent: hsenid_mobile_faq
 - what is [Hsenid mobile](company)?
@@ -136,9 +140,11 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 
 ##intent: ASE_dev
 - ASE_dev
+- /ASE_dev
 
 ##intent: trigger_apply
 - trigger_apply
+- /trigger_apply
 
 ##intent: inputs
 - [windula](name)
@@ -469,6 +475,106 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+
+##intent: help
+Can you help me?
+- Could you please show me what you can
+- Great, is there anything else you can do, bot?
+- How can you help me
+- How you help me?
+- I need help
+- I need some help
+- What are my options
+- What are you able to do?
+- What can I ask you?
+- What can I do?
+- What can you demo
+- What can you do
+- What can you do for me?
+- What can you do?
+- What can you tell me?
+- What do you do
+- anything els
+- are there any other options?
+- can I ask you anything else?
+- can you do anything else?
+- can you help me
+- can you help me?
+- come back
+- cool! can I do something else here?
+- hello what can you do for me
+- help
+- help me
+- help please
+- help pls
+- help?
+- hep me
+how can i use you
+- how can you help me
+- how can you help me?
+- how can you help?
+- how does this work?
+- how u can help me
+- how you help me
+- i asked you if you can do anything else
+- i don't know what i want
+- i need help
+- more info
+- now what?
+- options
+- show me the menu
+- show me what's possible
+- so now what
+- so what can you do
+- so what can you do?
+- so what can you help me with?
+- so what next?
+- talk to me
+- talk to me!
+- tell me something you can do
+- tell me what's your skill
+- um what now
+- what are all the things you understand?
+- what are the options?
+- what are you ding
+- what are you doing
+- what are you good at?
+- what can I ask ?
+- what can I ask you?
+- what can I do here
+- what can I do with Sara?
+- what can I do with this bot
+- what can i do here
+- what can i do now
+- what can u do
+- what can we talk about?
+- what can you answer
+- what can you do
+- what can you do for me
+- what can you do, sara?
+- what can you do?
+- what can you offer me?
+- what can you tell me
+- what can you?
+- what cn u do for me ?
+- what do you do
+- what do you do?
+- what do you know except this?
+- what else can I do here?
+- what else can i do
+- what else can i do?
+- what else can you do?
+- what else can you help with?
+- what i have to do
+- what is this bot for
+- what u can do
+- what u can do?
+- what you can do
+- what you can do for me?
+- what you can do?
+- what you do
+- what you doing?
+- what you talk about?
 
 ## intent:bot_challenge
 - are you a bot?

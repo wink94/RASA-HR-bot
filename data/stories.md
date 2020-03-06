@@ -18,17 +18,17 @@
 
   
 ## user introduction with name
-* name
+* greet
   - action_time_greeting 
 
 ## job search non specific with greet
 * greet
   - action_time_greeting
-* job_apply_fresh_non_specific
+* job_apply_fresh_grad
 
   
 ## job search non specific without greet
-* job_apply_fresh_non_specific
+* job_apply_fresh_grad
 
 
 ## job search dev with greet
@@ -78,7 +78,7 @@
   - form{"name": null}
   
 ## getting company details
-*
+
 
 ## sad path 2
 * greet
