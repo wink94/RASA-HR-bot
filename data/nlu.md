@@ -753,6 +753,7 @@ Can you help me?
 - hey i'm [^\\s]
 - hi im [^\\s]
 - hey im [^\\s]
+- my name is [^\\s]
 
 ## synonym:Development
 - Dev

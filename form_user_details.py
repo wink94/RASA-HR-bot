@@ -45,7 +45,7 @@ class UserDetailForm(FormAction):
         tracker: "Tracker",
         domain: Dict[Text, Any],
     ) -> Optional[List[EventType]]:
-
+        print(tracker.current_slot_values())
         #track intent of the input
         intent = tracker.latest_message.get("intent", {}).get("name")
 
