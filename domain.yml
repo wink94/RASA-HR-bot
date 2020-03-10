@@ -28,6 +28,7 @@ intents:
   - apply_development
   - apply_project_management
   - apply_intern
+  - out_of_scope/other
 
 entities:
   - name
@@ -268,6 +269,9 @@ responses:
     - text: No worries!
     - text: You're welcome!
     - text: I'm happy to help.
+
+  utter_default:
+    - text: "I'm sorry i cannot answer this question.\nCan i help you with.......\nStarting your career at Hsenid Mobile\nTell you about the company\nTell jokes"
 
 forms:
   - user_detail_form

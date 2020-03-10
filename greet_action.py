@@ -41,8 +41,7 @@ class ActionTimeGreet(Action):
            tracker: Tracker,
            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-       help_text="How may i help you?"
-       greet_msg=''
+       print(tracker.current_slot_values())
        if(tracker.current_slot_values()['name'] != None):
 
            greet_msg=self.timeGreeting()+" !! "+tracker.current_slot_values()['name']+", "+self.randGreeting()

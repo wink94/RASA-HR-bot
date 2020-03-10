@@ -178,6 +178,13 @@
   - utter_ask_form_continue
 * deny
   - action_deactivate_form
+  
+##user detail form deactivate+affirm+activate
+* deactivate
+  - utter_ask_form_continue
+* affirm
+  - form{"name":"user_detail_form"}
+  - form{"name": null}
 
 ## user ask a joke
 * telljoke
@@ -193,6 +200,7 @@
   - utter_did_that_help
 * deny
   - utter_goodbye
+
 
 ## say goodbye
 * goodbye

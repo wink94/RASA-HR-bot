@@ -84,6 +84,8 @@ currently im looking for a Associate Engineer position.
 - hello i was a undergraduate of [universitry of colombo](university)
 - can you list job openings for freshers?
 - what are the openings for freshers.
+- i'am a freshers graduate looking for job openings.
+- 
 
 
 ## intent: job_apply_non_specific
@@ -178,8 +180,8 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - [roshini](name)
 - [akila](name)
 - [devam](name)
-- [devni](name)
-- [devin](name)
+- my name is [devni](name)
+- i'm [devin](name)
 - my email is [test@gmail.com](email)
 - my email is [sdfsd@ghon.com](email)
 - email is [test@test.com](email)
@@ -210,10 +212,21 @@ im looking for a [dev](job_category:Development) job. can you tell me what are t
 - [software engineering](study_stream)
 - [information technology](study_stream)
 - [computer science](study_stream)
-- [university of moratuwa](study_stream)
-- [university of colombo](study_stream)
-- [iit](study_stream)
-- [sliit](study_stream)
+- [university of moratuwa](university)
+- [university of colombo](university)
+- [iit](university)
+- [sliit](university)
+- [Associate System Engineer - Implementation](job_preference)
+- [Associate Software Engineer (DA)](job_preference)
+- [Associate Business Solutions Engineer](job_preference)
+- [Associate Project Manager](job_preference)
+- [Internship – Customer support](job_preference)
+- [System Engineering Apprenticeship](job_preference)
+- [Software Development Apprenticeship](job_preference)
+- [Quality Assurance Apprenticeship](job_preference)
+- [Internship – Software Engineer](job_preference)
+- [Internship – Quality Assurance](job_preference)
+
 
 
 ## intent:affirm
@@ -675,6 +688,7 @@ Can you help me?
 - tell me something funny, like a joke
 - you can say a jok
 
+
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
@@ -728,7 +742,7 @@ Can you help me?
 - [^@]+@[^@]+\.[^@]+
 
 ## regex:phone
-- ^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$
+- ^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|5|6|7|8)\d)\d{6}$
 
 ## regex:age
 - ^([1-9]\d?)?$
