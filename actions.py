@@ -4,6 +4,9 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 import greet_action
+import form_user_details
+import form_deactivate_action
+import form_friend_refer
 
 # This is a simple example for a custom action which utters "Hello World!"
 
@@ -25,3 +28,4 @@ import greet_action
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+

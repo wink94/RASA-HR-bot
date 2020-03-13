@@ -1,84 +1,293 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - job_apply_fresh_non_specific
-  - hsenid_mobile_faq
-
-actions:
-  - utter_job_apply_fresh_non_specific
-  - utter_hsenid_mobile_faq
-
-
+- greet
+- goodbye
+- affirm
+- mood_great
+- mood_unhappy
+- thank
+- bye
+- deny
+- react_positive
+- help
+- bot_challenge
+- hsenid_mobile_faq
+- hsenid_mobile_and_hsenid_biz_faq
+- job_apply_fresh_grad
+- job_apply_non_specific
+- job_apply_intern
+- undergraduate
+- job_apply_dev
+- inputs
+- ASE_dev
+- trigger_apply
+- trigger_reject
+- trigger_back
+- deactivate
+- telljoke
+- apply_impl_support
+- apply_development
+- apply_project_management
+- apply_intern
+- detailed_input_intern
+- out_of_scope/other
+entities:
+- name
+- email
+- phone
+- dob
+- job_preference
+- age
+- university
+- study_stream
+- company
+- job_category
+- job_applicant
 slots:
-  name:
-    type: text
-  email:
-    type: unfeaturized
-  phone:
-    type : unfeaturized
-  applying_job_title_fresh:
-    type: unfeaturized
-  previous_job_title_fresh:
-    type: unfeaturized
-  experience:
-    type: unfeaturized
-  dob:
-    type: unfeaturized
   age:
     type: unfeaturized
-  degree:
+  alternative_phone:
     type: unfeaturized
-  home_town:
-    type: unfeaturized
-  university:
-    type: unfeaturized
-  study_stream:
+  applying_job_title_fresh:
     type: unfeaturized
   company:
     type: unfeaturized
-
-
+  dob:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  job_applicant:
+    type: categorical
+    values:
+    - intern
+    - fresh_graduate
+  job_category:
+    type: categorical
+    values:
+    - development
+    - implementation
+    - internship
+  job_preference:
+    type: categorical
+    values:
+    - ase_impl
+    - ase_da
+    - apm
+    - abse
+    - internship_customer_support
+    - sys_eng_apprentice
+    - soft_dev_apprentice
+    - qa_apprentice
+    - se_intern
+    - qa_intern
+  name:
+    type: text
+  phone:
+    type: list
+  study_stream:
+    type: unfeaturized
+  university:
+    type: unfeaturized
 responses:
-  utter_greet:
-  - text: "Hi Welcome to Hsenid Mobile, How may i help you?"
-  - text: "Hello Welcome to Hsenid mobile bot service, How can i help You?"
-  - text: "Greetings from Hsenid Mobile, How may i helps you?"
-
-  utter_job_apply_fresh_non_specific:
+  utter_job_apply_non_specific:
   - text: "These are our available openings, What do you prefer? \n"
     buttons:
-      - title: "Implementation/Support"
-        payload: '/apply{"type": "impl_support"}'
-      - title: "Development"
-        payload: '/apply{"type": "development"}'
-      - title: "Project Management"
-        payload: '/apply{"type": "project_management"}'
-      - title: "Internship"
-        payload: '/apply{"type": "intern"}'
-      - title: "Not Interested"
-        payload: '/apply{"type": "intern"}'
-
+    - title: Implementation/Support
+      payload: '/apply{"type": "impl_support"}'
+    - title: Development
+      payload: '/apply{"type": "development"}'
+    - title: Project Management
+      payload: '/apply{"type": "project_management"}'
+    - title: Internship
+      payload: '/apply{"type": "intern"}'
+    - title: Not Interested
+      payload: /trigger_back
+  utter_thank_for_job_apply_non_specific:
+  - text: Thank you for your interest, Would you like to know our openings?
+  utter_ask_details:
+  - text: I need some details about you. I hope you are okay with it
+  - text: Thank you for your interest, Would you like to know our openings?
+  utter_thank_for_job_apply_non_specific_Implementation_Support:
+  - text: Thank you for your interest, Would you like to know our openings on Implementation/Support?
+  utter_thank_for_job_apply_non_specific_Development:
+  - text: Thank you for your interest, Would you like to know our openings on Development?
+  utter_thank_for_job_apply_non_specific_project_management:
+  - text: Thank you for your interest, Would you like to know our openings on Project
+      Management?
+  utter_thank_for_job_apply_non_specific_internships:
+  - text: Thank you for your interest, Would you like to know our openings on Internships?
+  utter_fresh_grad_job_list:
+  - text: "These are the currently available positions for fresh graduates\nAssociate\
+      \ System Engineer - Implementation\n Associate Software Engineer (DA)\nAssociate\
+      \ Business Solutions Engineer\nAssociate Project Manager\n\n \n\n Do you want\
+      \ to apply?"
+    buttons:
+    - title: Yes
+      payload: /trigger_apply
+    - title: No
+      payload: /trigger_reject
+    - title: Back
+      payload: /trigger_back
+  utter_fresh_grad_job_select_list:
+  - text: "Please select your preferred opening\n Designation List \n\n"
+    buttons:
+    - title: Associate System Engineer - Implementation
+      payload: /ASE_impl
+    - title: Associate Software Engineer (DA)
+      payload: /ASE_DA
+    - title: Associate Business Solutions Engineer
+      payload: /ABSE
+    - title: Associate Project Manager
+      payload: /APM
+    - title: Exit
+      payload: bye
+  utter_intern_job_apply:
+  - text: "These are the currently available positions for interns\nInternship – Customer\
+      \ support\n System Engineering Apprenticeship\nSoftware Development Apprenticeship\n\
+      Quality Assurance Apprenticeship\nInternship – Software Engineer\nInternship\
+      \ – Quality Assurance\n \n\n Do you want to apply?"
+    buttons:
+    - title: Yes
+      payload: /trigger_apply
+    - title: No
+      payload: /trigger_reject
+    - title: Exit
+      payload: bye
+  utter_intern_job_select_list:
+  - text: "Please select your preferred opening\n Designation List \n\n"
+    buttons:
+    - title: Internship – Customer support
+      payload: /Internship_Customer_support
+    - title: System Engineering Apprenticeship
+      payload: /Sys_eng_apprentice
+    - title: Software Development Apprenticeship
+      payload: /soft_dev_apprentice
+    - title: Quality Assurance Apprenticeship
+      payload: /QA_apprentice
+    - title: Internship – Software Engineer
+      payload: /SE_intern
+    - title: Internship – Quality Assurance
+      payload: /QA_intern
+    - title: Back
+      payload: /trigger_back
+  utter_job_apply_dev:
+  - text: "These are the currently available positions for Development\n Designation\
+      \ List \n\nAssociate Software Engineer\nSoftware Engineer\n \n\n Do you want\
+      \ to apply?\n"
+    buttons:
+    - title: Yes
+      payload: /trigger_apply
+    - title: No
+      payload: /trigger_reject
+    - title: Back
+      payload: /trigger_back
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_hsenid_mobile_faq:
-  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nproven expertise while still having a heart of a startup. \nWe design and build innovative cutting-edge technology platforms which enables the digital transformation of the businesses.\n"
-  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of innovations, \nOur solutions are used by leading Telecoms and Enterprises around the globe. \nThose revolutionary solutions bring high level of flexibility and continuous revenue growth for our customers enabling an Eco-system of creators around them."
+  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of\
+      \ innovations, \nproven expertise while still having a heart of a startup. \n\
+      We design and build innovative cutting-edge technology platforms which enables\
+      \ the digital transformation of the businesses.\n"
+  - text: "hSenid Mobile Solutions is a company with a proud history of 20 years of\
+      \ innovations, \nOur solutions are used by leading Telecoms and Enterprises\
+      \ around the globe. \nThose revolutionary solutions bring high level of flexibility\
+      \ and continuous revenue growth for our customers enabling an Eco-system of\
+      \ creators around them."
+  utter_hsenid_mobile_biz_faq:
+  - text: hSenid mobile solutions provide mobile based solutions while biz provide
+      HRM solutions
+  utter_goodbye_submit_CV:
+  - text: "Bye, Thank you for getting in touch with Hsenid Mobile solutions \nYou\
+      \ can submit your CV to this link: https://www.hsenidmobile.com/careers/#careers\
+      \ \n"
+  utter_services:
+  - text: " I can help you with\nStart your career at Hsenid Mobile\nTell you about\
+      \ the company\nTell jokes"
+  utter_joke:
+  - text: "\U0001F428 Why did the chatbot cross the road?\n Because it was programmed\
+      \ to be a chicken!"
+  - text: "\U0001F428 You know, I was chatting to a lumberjack the other day.\n He\
+      \ seemed like a decent feller."
+  - text: "\U0001F464: Are you hungry?\n \U0001F428: No thanks, I just had a byte\
+      \ to eat."
+  - text: "My old aunts would come and tease me at weddings, “Well Sarah? Do you think\
+      \ you’ll be next?\n” We’ve settled this quickly once I’ve started doing the\
+      \ same to them at funerals."
+  utter_ask_form_continue:
+  - text: Do you want to continue?
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye, Thank you for getting in touch with Hsenid Mobile solutions
   utter_iamabot:
-  - text: "I am a bot, powered by Hsenid."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: I am a bot, powered by Hsenid.
+  utter_ask_name:
+  - text: What's your first name?
+  utter_ask_dob:
+  - text: What's your birthday (dd/mm/yyyy)?
+  utter_ask_phone:
+  - text: What's your phone number?
+  utter_ask_email:
+  - text: What's your email?
+  utter_ask_job_preference:
+  - text: What is your preferred job position
+  utter_ask_FriendName:
+  - text: What's your friends name?
+  utter_ask_FriendEmail:
+  - text: What's your friends email?
+  utter_help:
+  - text: How may i help you?
+  - text: Shall i help you?
+  utter_thank_suggestion:
+  - text: Thanks for your input!
+  utter_noworries:
+  - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
+  utter_default:
+  - text: "I'm sorry i cannot answer this question.\nCan i help you with.......\n\
+      Starting your career at Hsenid Mobile\nTell you about the company\nTell jokes"
+  utter_refer_friend:
+  - text: Do you like to refer a friend?
+actions:
+- utter_job_apply_non_specific
+- utter_hsenid_mobile_faq
+- action_time_greeting
+- utter_job_apply_dev
+- utter_thank_suggestion
+- utter_noworries
+- utter_goodbye
+- utter_goodbye_submit_CV
+- utter_fresh_grad_job_list
+- utter_intern_job_apply
+- utter_services
+- utter_fresh_grad_job_select_list
+- utter_ask_form_continue
+- action_form_deactivate
+- utter_joke
+- utter_thank_for_job_apply_non_specific
+- utter_ask_details
+- utter_refer_friend
+- utter_thank_for_job_apply_non_specific_Implementation_Support
+- utter_thank_for_job_apply_non_specific_Development
+- utter_thank_for_job_apply_non_specific_project_management
+- utter_thank_for_job_apply_non_specific_internships
+- utter_intern_job_select_list
+- utter_cheer_up
+- utter_did_that_help
+- utter_hsenid_mobile_biz_faq
+- utter_iamabot
+- utter_ask_name
+- utter_ask_dob
+- utter_ask_phone
+- utter_ask_email
+- utter_ask_job_preference
+- utter_ask_FriendName
+- utter_ask_FriendEmail
+- utter_help
+- utter_default
+forms:
+- user_detail_form
